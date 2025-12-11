@@ -1,0 +1,164 @@
+<!doctype html>
+
+<html><BR>
+SAİT CANDEMİR SİSTEM.. 5 SANİYE BEKLEYİP KIRMIZI MARKERİ TIKLAYINIZ<BR>
+
+<head>
+  <style>
+#map {  height: 100%;}
+
+html,
+body {  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+  
+  #info-box {
+  background-color: white;
+  border: 1px solid black;
+  bottom: 30px;
+  height: 20px;
+  padding: 10px;
+  position: absolute;
+  left: 30px;
+}
+
+
+}
+ </style>
+
+<button id="demo" onclick="getLocation()">BULUNDUGUNUZ KOORDİNAT </button>
+  </head>
+  
+  
+  <body>
+  <input type="file" id="kmlFile" accept=".kml,.kmz">
+  
+  
+    <div id="map"></div>
+   <script >
+   
+   
+   	
+    // MARKER FONCTİONLARI 
+function kazibol() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+	window.speechSynthesis.speak(new SpeechSynthesisUtterance(',,BİLGİ İÇİN TIKLAYINIZ,,YADA SAİT BEYİ ARAYINIZ'));
+  } else {
+    	window.speechSynthesis.speak(new SpeechSynthesisUtterance('KAZI ALANI,,BİLGİ İÇİN TIKLAYINIZ ,,YADA SAİT BEYİ ARAYINIZ'));
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+    }}
+
+function cikis() {
+     marker.setAnimation(null);
+     	window.speechSynthesis.speak(new SpeechSynthesisUtterance('bu bölgenin proje kodu 128.60'));  }
+	    // MARKER FOCTION   BITTI
+
+
+
+    // HESAPLAMA  FONCTİONLARI 
+const x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+function success(position) {
+  x.innerHTML = "Latitude: " + position.coords.longitude + 
+  "<br>Longitude: " + position.coords.latitude ;
+}
+function error() {
+  alert("Sorry, no position available.");
+}
+
+
+// SAİT SİSTEM BAŞLANGICI
+function initMap() { 
+const map = new google.maps.Map(document.getElementById("map"), {    zoom: 18,    center: { lat: 37.214931, lng: 28.363885 },    mapTypeId: "terrain",  });
+
+    // MARKER OLUSTUR
+  marker = new google.maps.Marker({    map,    draggable: true,    animation: google.maps.Animation.DROP,  position: { lat: 42.327, lng: 42.067 },  });
+    marker.addListener("mouseover", kazibol);   
+    marker.addListener("click", cikis); 
+
+
+				     marker22 = new google.maps.Marker({    map, position: { lat:37.214294380, lng:  28.3628052029295}, });
+	  marker22.addListener("mouseover", kazibol); 
+	  marker22.addListener("click", cikis22); 
+	  function cikis22() {
+      	window.speechSynthesis.speak(new SpeechSynthesisUtterance('LUK 22,,100 LÜK,,KUYU YUKSEKLIGI 90 SANTİM, ZEMİN KODU 125, KAZI KODU 126, KAZI YUKSEKLİĞİ 1 METRE'));  }
+		
+		
+								     marker23 = new google.maps.Marker({    map, position:  { lat:37.2144 , lng:28.36260  }, });
+	  marker23.addListener("mouseover", kazibol); 
+	  marker23.addListener("click", cikis23); 	
+			  function cikis23() {
+     	window.speechSynthesis.speak(new SpeechSynthesisUtterance('LUK 32,,120 LİK,,KUYU YUKSEKLIGI 90 SANTİM, ZEMİN KODU 125, KAZI KODU 126, KAZI YUKSEKLİĞİ 1 METRE'));  }
+				
+								 
+							     marker24 = new google.maps.Marker({    map, position:  { lat:37.214714, lng:28.36232  }, });
+	  marker24.addListener("mouseover", kazibol); 
+	  marker24.addListener("click", cikis24); 
+			  function cikis24() {
+     	window.speechSynthesis.speak(new SpeechSynthesisUtterance('LUK 42,,110 LÜK,,KUYU YUKSEKLIGI 90 SANTİM, ZEMİN KODU 125, KAZI KODU 126, KAZI YUKSEKLİĞİ 1 METRE'));  }
+		
+
+						     marker25 = new google.maps.Marker({    map, position:  { lat:37.21522 , lng: 28.3621  }, });
+	  marker25.addListener("mouseover", kazibol); 
+	  marker25.addListener("click", cikis25); 
+	  	  function cikis25() {
+     	window.speechSynthesis.speak(new SpeechSynthesisUtterance('LUK 52,,100 LÜK,,KUYU YUKSEKLIGI 90 SANTİM,, ZEMİN KODU 126,, KAZI KODU 127,, KAZI YUKSEKLİĞİ 1 METRE'));  }
+		
+				
+							
+							     marker26 = new google.maps.Marker({    map, position:   { lat: 37.2156, lng: 28.362627  }, });
+	  marker26.addListener("mouseover", kazibol); 
+	  marker26.addListener("click", cikis26);
+	  function cikis26() {
+     	window.speechSynthesis.speak(new SpeechSynthesisUtterance('LUK 62,,100 LÜK,,KUYU YUKSEKLIGI 90 SANTİM, ,ZEMİN KODU 127, KAZI KODU 128, ,KAZI YUKSEKLİĞİ 1 METRE'));  }
+		
+		
+									
+							     marker27 = new google.maps.Marker({    map, position:    { lat: 37.2154 , lng: 28.3630 }, });
+	  marker27.addListener("mouseover", kazibol); 
+	  marker27.addListener("click", cikis26);
+	  function cikis27() {
+     	window.speechSynthesis.speak(new SpeechSynthesisUtterance('LUK 62,,100 LÜK,,KUYU YUKSEKLIGI 90 SANTİM, ,ZEMİN KODU 127, KAZI KODU 128, ,KAZI YUKSEKLİĞİ 1 METRE'));  }
+		
+
+				
+		
+		
+		
+     marker2 = new google.maps.Marker({    map, position: { lat: 41.327, lng: 41.067 }, });
+	  marker2.addListener("mouseover", cikis); 
+	  
+	  
+     marker3 = new google.maps.Marker({    map,  position: { lat: 41.127, lng: 41.167 }, });
+	  marker3.addListener("mouseover", cikis); 
+	  
+
+		
+	     // MARKER FONCTION EMİRLER 
+
+var kmlLayer = new google.maps.KmlLayer({
+  url: 'C:\Users\saitc\OneDrive\Desktop\ikili\SAT1.kml',
+  map: map
+});
+
+	//FONTION INITMAP BBITIS 
+ 	}
+   </script> 
+
+      <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+	
+  </body>
+  
+  
+</html>
