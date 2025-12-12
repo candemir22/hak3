@@ -11,6 +11,16 @@ async function initMap() {
     // Get the feature layer.
     featureLayer = innerMap.getFeatureLayer(google.maps.FeatureType.LOCALITY);
     // Define a style with purple fill and border.
+    
+     marker = new google.maps.Marker({
+    map,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
+    position: { lat: 42.327, lng: 42.067 },
+  }); 
+    
+    
+    
     const featureStyleOptions = {
         strokeColor: '#810FCB',
         strokeOpacity: 1.0,
@@ -27,5 +37,6 @@ async function initMap() {
 }
 
 initMap();
+
 
 
