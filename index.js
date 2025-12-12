@@ -1,5 +1,5 @@
 let marker;
-function initMap() {
+async function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 13,
     center: { lat: 42.325, lng: 42.07 },
@@ -49,3 +49,4 @@ function cikis() {
 
   
 window.initMap = initMap;
+
