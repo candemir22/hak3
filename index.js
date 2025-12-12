@@ -5,7 +5,7 @@ async function initMap() {
 
     await google.maps.importLibrary("maps");
 
-    const mapElement = new google.maps.Map(document.getElementById("gmp-map"), {    zoom: 18,    center: { lat: 37.214931, lng: 28.363885 },    mapTypeId: "terrain",  });
+    const mapElement = new google.maps.Map(document.getElementById("map"), {    zoom: 18,    center: { lat: 37.214931, lng: 28.363885 },    mapTypeId: "terrain",  });
     // Get the inner map.
     const innerMap = mapElement.innerMap;
     // Get the feature layer.
@@ -37,6 +37,7 @@ async function initMap() {
 }
 
 initMap();
+
 
 
 
