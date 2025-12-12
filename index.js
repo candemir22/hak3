@@ -28,15 +28,15 @@ async function initMap() {
         fillColor: '#810FCB',
         fillOpacity: 0.5
     };
-    // Apply the style to a single boundary.
-    featureLayer.style = (options) => {
-        if (options.feature.placeId == 'ChIJ0zQtYiWsVHkRk8lRoB1RNPo') { // Hana, HI
-            return featureStyleOptions;
-        }
-    };
+
+
+
+
+    
 }
 
 initMap();
+
 
 
 
