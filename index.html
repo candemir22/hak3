@@ -17,18 +17,21 @@
 
 
 <script>
-let marker;
-function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 13,
-    center: { lat: 42.325, lng: 42.07 },
+
+  marker = new google.maps.Marker({
+    map,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
+    position: { lat: 42.327, lng: 42.067 },
   });
+
    </script>
 
          
   
   </body>
 </html>
+
 
 
 
