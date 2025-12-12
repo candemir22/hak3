@@ -13,21 +13,13 @@ async function initMap() {
     // Define a style with purple fill and border.
     
      marker = new google.maps.Marker({
-    map,
+    gmp-map,
     draggable: true,
     animation: google.maps.Animation.DROP,
     position: { lat: 42.327, lng: 42.067 },
   }); 
     
-    
-    
-    const featureStyleOptions = {
-        strokeColor: '#810FCB',
-        strokeOpacity: 1.0,
-        strokeWeight: 3.0,
-        fillColor: '#810FCB',
-        fillOpacity: 0.5
-    };
+
 
 
 
@@ -36,6 +28,7 @@ async function initMap() {
 }
 
 initMap();
+
 
 
 
